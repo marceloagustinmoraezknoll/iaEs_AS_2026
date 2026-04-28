@@ -1,136 +1,222 @@
-# Material de Estudio Extenso - UNIDAD 4: Etapa de Relevamiento
+# 📘 Unidad 3: Relevamiento e Identificación de Problemas
 
-Este material profundiza en la etapa de relevamiento, integrando las metodologías de **Kendall & Kendall, Roger Pressman, Edward Yourdon** y guías de gestión de proyectos para proporcionar una visión técnica y detallada de la obtención de requerimientos.
+## a) Relevamiento preliminar y relevamiento detallado
 
----
+El proceso de relevamiento constituye una de las etapas más críticas dentro del desarrollo de sistemas, ya que de su correcta ejecución depende la calidad del análisis posterior. Según los enfoques clásicos de Edward Yourdon y Kenneth E. Kendall, este proceso se divide en dos fases claramente diferenciadas: relevamiento preliminar y relevamiento detallado.
 
-## a) Relevamiento Preliminar y Relevamiento Detallado: Diferencias
+### Relevamiento preliminar (Estudio inicial o de factibilidad)
 
-El proceso de relevamiento no es un evento único, sino una progresión que va desde lo general a lo específico.
+El relevamiento preliminar tiene como objetivo principal determinar si el proyecto debe llevarse adelante. En esta etapa se realiza una evaluación general del problema, considerando su viabilidad técnica, económica y operativa.
 
-1.  **Relevamiento Preliminar (La Encuesta o Estudio de Factibilidad):** 
-    *   **Objetivo:** Su propósito es identificar a los usuarios responsables y establecer un "campo de actividad" inicial [1]. 
-    *   **Actividades:** Involucra una serie de entrevistas breves para determinar qué departamentos se verán afectados y el desarrollo de un **diagrama de contexto**, que representa al sistema como un proceso único para entender sus fronteras [1, 2]. 
-    *   **Alcance:** Ocupa entre el 5% y el 10% de los recursos totales del proyecto [3]. Se centra en la viabilidad técnica, económica y operativa para decidir si el proyecto debe cancelarse o continuar [3, 4].
-    
-2.  **Relevamiento Detallado (Determinación de Requerimientos):** 
-    *   **Objetivo:** Comprender exhaustivamente los requerimientos humanos de información y las interacciones de los usuarios con la tecnología (HCI) [5, 6]. 
-    *   **Actividades:** El analista utiliza métodos interactivos (entrevistas, cuestionarios, JAD) y discretos (observación, muestreo) para descubrir el "quién, qué, dónde, cuándo, cómo y por qué" de los procedimientos actuales [7, 8].
-    *   **Alcance:** Busca definir la **esencia del sistema** (lo que debe hacer) independientemente de la tecnología que se usará [9, 10].
+Desde la perspectiva metodológica, esta fase representa una instancia exploratoria donde el analista busca comprender el contexto organizacional sin profundizar en los detalles técnicos. Se trata de obtener una visión global del sistema actual y de las problemáticas existentes.
 
----
+Su duración es relativamente breve en comparación con el resto del proyecto, ocupando aproximadamente entre un 5% y un 10% del tiempo total. Sin embargo, su importancia es clave, ya que permite evitar inversiones innecesarias en proyectos inviables.
 
-## b) Información a Relevar
+Uno de los elementos fundamentales de esta etapa es la delimitación del sistema. Para ello, se utiliza el diagrama de contexto, que representa al sistema como un único proceso y permite identificar:
+- Los límites del sistema
+- Las entidades externas (terminadores)
+- Los flujos de información principales
 
-### Cantidad vs. Calidad
-El analista debe ser selectivo. Recopilar datos irrelevantes es costoso y genera "ruido" en el análisis [11, 12]. La **calidad** de la información es superior a la cantidad; se busca información precisa que ayude a diferenciar los problemas reales de los síntomas superficiales [10]. Una sobrecarga de información puede impedir que los responsables tomen decisiones efectivas [13].
-
-### Fuentes de Información Disponibles
-Existen tres categorías principales de fuentes [6, 14, 15]:
-*   **Fuentes Humanas:** Usuarios finales, gerentes de operaciones y administradores estratégicos. Son clave para obtener opiniones y sentimientos sobre el sistema actual [16].
-*   **Documentación Organizacional:** Incluye datos "duros" (informes de rendimiento, registros de transacciones) y cualitativos (manuales de procedimientos, memorandos, correos electrónicos) [17, 18].
-*   **Entorno Físico:** El análisis de la oficina y el espacio de trabajo revela la cultura organizacional y cómo se procesa la información en la práctica [19, 20].
+En esta fase se busca obtener una “fotografía inicial” del sistema, identificando deficiencias y oportunidades sin entrar aún en el detalle de procesos internos.
 
 ---
 
-## c) Muestreo (Sampling)
+### Relevamiento detallado (Determinación de requerimientos)
 
-### Necesidad (Objeto del Muestreo)
-El muestreo es la selección sistemática de elementos representativos para revelar información útil sobre la población total [21]. Sus objetivos fundamentales son [11]:
-1.  **Contener Costos:** Evita el gasto masivo de examinar cada documento o entrevistar a cada empleado [11].
-2.  **Agilizar la Recopilación:** Permite obtener una imagen válida del sistema en una fracción del tiempo necesario para un censo completo [22].
-3.  **Mejorar la Efectividad:** Al tratar con menos elementos, el analista puede ser más minucioso y realizar un seguimiento detallado de cada dato obtenido [23].
-4.  **Reducir Predisposición:** Seleccionar muestras de forma estadística (como el muestreo aleatorio complejo) evita que el análisis se distorsione por opiniones aisladas o datos atípicos [23, 24].
+Una vez validada la viabilidad del proyecto, se avanza hacia el relevamiento detallado, cuyo objetivo es comprender en profundidad el funcionamiento del sistema actual.
 
----
+En esta etapa, el analista debe responder preguntas fundamentales:
+- ¿Quién realiza las tareas?
+- ¿Qué tareas se realizan?
+- ¿Dónde se realizan?
+- ¿Cuándo se realizan?
+- ¿Cómo se realizan?
 
-## d) El Plan de Acción
+El relevamiento detallado es un proceso iterativo, en el cual se combinan técnicas interactivas y técnicas discretas para obtener una visión completa del sistema.
 
-### Confección del Plan de Acción
-La planificación crea un "mapa" que guía al equipo de ingeniería de software a través de tareas, riesgos y recursos [25].
-*   **Determinación de Objetivos:** Deben ser lo más específicos posible para definir la extensión y duración del proyecto (ej: "Construir un sistema de ventas en línea") [26, 27].
-*   **Descomposición de Actividades:** Se divide el proyecto en fases (análisis, diseño, implementación) y estas en tareas menores [28, 29].
-*   **Establecimiento de Secuencia:** Se identifican tareas que dependen de otras y tareas que pueden ejecutarse en paralelo para optimizar el tiempo [27, 30].
-*   **Herramientas de Control:** 
-    *   **Diagramas de Gantt:** Muestran el calendario del proyecto con barras horizontales. Permiten ver qué tareas están completadas y cuáles presentan retrasos [31, 32].
-    *   **Diagramas PERT:** Representan al proyecto como una red de nodos y flechas. Son fundamentales para identificar la **ruta crítica**, que es la secuencia de actividades cuyo retraso postergaría todo el proyecto [33-35].
+El resultado de esta fase es la construcción de un modelo esencial del sistema, que describe qué debe hacer el sistema, independientemente de la tecnología que se utilice para implementarlo.
 
 ---
 
-## e) Entrevistas
+## b) Información a relevar
 
-### Planeación
-Antes de la reunión, el analista debe seguir cinco pasos: leer antecedentes (informes anuales, sitios web), establecer objetivos claros, decidir a quién entrevistar (muestreo representativo), preparar al entrevistado y seleccionar la estructura de preguntas [15, 36, 37].
+### Cantidad y calidad de la información
 
-### Desarrollo: Tipos de Preguntas y Estructura
-*   **Preguntas Abiertas:** Permiten respuestas extensas y espontáneas (ej: "¿Qué opina del nuevo portal?"). Ayudan a entender el vocabulario y sentimientos del usuario [38, 39].
-*   **Preguntas Cerradas:** Limitan las opciones de respuesta (ej: "¿Cuántos pedidos procesa al día?"). Son útiles para obtener datos precisos y ahorrar tiempo [40, 41].
-*   **Preguntas Bipolares:** Un tipo de cerrada con solo dos opciones (Sí/No, De acuerdo/En desacuerdo) [42].
-*   **Sondeos:** Preguntas de seguimiento (ej: "¿Por qué piensa eso?") para profundizar en declaraciones ambiguas o superficiales [43, 44].
+La información dentro de una organización debe ser considerada como un recurso estratégico. Su obtención, almacenamiento y procesamiento implican costos, por lo que su gestión debe ser eficiente.
 
-**Estructuras Lógicas:**
-*   **Pirámide:** Inicia con preguntas cerradas y específicas para luego abrirse a temas generales [45, 46].
-*   **Embudo:** Comienza con preguntas amplias y abiertas para luego restringirse a respuestas específicas [47, 48].
-*   **Diamante:** Combina ambas; empieza específico, se amplía a temas generales y concluye con una resolución particularizada [49, 50].
-
-### Escritura del Reporte
-El reporte debe escribirse inmediatamente después de la entrevista para no perder calidad en los datos [51]. Debe incluir un resumen inicial de impresiones y un desarrollo detallado de los puntos principales [50]. Se recomienda revisar el reporte con el entrevistado para corregir malentendidos [50].
-
-### Técnicas de Registro
-*   **Grabación:** Captura exactamente lo dicho, pero requiere permiso y puede inhibir al usuario [52, 53].
-*   **Toma de Notas:** Permite registrar señales no verbales y aspectos del entorno, aunque puede interrumpir el flujo si el analista se enfoca demasiado en escribir [52, 54].
+El analista debe priorizar la calidad de la información por sobre la cantidad. La recolección excesiva de datos irrelevantes no solo genera desperdicio de recursos, sino que puede provocar sobrecarga de información en los usuarios, dificultando la toma de decisiones.
 
 ---
 
-## f) Cuestionarios
+### Fuentes de información y usuarios del sistema
 
-### Planeación
-Se usan cuando los usuarios están geográficamente dispersos o cuando se necesita cuantificar opiniones de un grupo grande [55, 56]. Requieren una planeación meticulosa de la terminología, ya que no hay oportunidad de aclaración inmediata [57, 58].
+Para lograr un relevamiento efectivo, es fundamental identificar y clasificar a los distintos tipos de usuarios, ya que cada uno posee una perspectiva diferente del sistema.
 
-### Uso de Escalas
-*   **Nominal:** Clasifica elementos en categorías (ej: Ventas, Producción) [59].
-*   **Intervalo:** Los intervalos entre puntos son iguales, permitiendo calcular promedios (ej: escala de 1 a 5 para medir utilidad) [60, 61].
+- **Usuarios operacionales:** trabajan directamente con el sistema y se enfocan en las tareas diarias. Su interés está en la facilidad de uso, velocidad y precisión.
+  
+- **Nivel medio (táctico):** utilizan la información para control y toma de decisiones a corto plazo. Requieren datos organizados y actualizados.
 
-### Diseño
-*   **Preguntas Abiertas vs. Cerradas:** Las cerradas son preferibles en muestras grandes por su facilidad de análisis cuantitativo; las abiertas son ideales para explorar problemas no anticipados [62, 63].
-*   **Orden de las Preguntas:** Las más importantes y menos controversiales deben ir al principio para motivar al encuestado [64, 65].
+- **Nivel estratégico (ejecutivo):** tienen una visión global del negocio. Se enfocan en indicadores, tendencias y ventajas competitivas.
 
 ---
 
-## g) Revisión de la Documentación
+### Documentación existente y procedimientos actuales
 
-El analista debe investigar dos tipos de evidencia documental [17]:
-1.  **Documentos Cuantitativos:** Informes para toma de decisiones, informes de rendimiento (brecha entre lo real y lo esperado), registros de transacciones y formularios de captura de datos [66, 67].
-2.  **Documentos Cualitativos:** Memorandos, correos electrónicos, manuales de políticas y anuncios. Revelan las expectativas de los autores, la cultura organizacional y el lenguaje común de la empresa [18, 68].
+El analista debe revisar toda la documentación disponible, actuando como un investigador que busca comprender cómo funciona realmente la organización.
 
----
+Se distinguen dos tipos principales de documentos:
 
-## h) Observación Directa
+- **Documentación cuantitativa:**
+  - Informes de gestión
+  - Reportes de rendimiento
+  - Formularios
+  - Registros operativos
 
-### Guión del Analista (Playscript)
-Es una técnica humanista para documentar actividades de toma de decisiones. El analista registra al "actor" y sus "acciones" usando verbos específicos (habla, decide, firma) para entender el flujo de trabajo real [19, 69].
+- **Documentación cualitativa:**
+  - Correos electrónicos
+  - Memorandos
+  - Manuales internos
+  - Políticas organizacionales
 
-### Técnica STROBE (Structured Observation of the Environment)
-Permite observar sistemáticamente el entorno físico para interpretar cómo el encargado de decisiones usa la información [70]. Analiza 7 elementos clave [20, 71]:
-1.  **Ubicación de la oficina.**
-2.  **Colocación del escritorio.**
-3.  **Equipo de oficina estacionario.**
-4.  **Accesorios (dispositivos electrónicos).**
-5.  **Fuentes externas de información (revistas, libros).**
-6.  **Iluminación y colores.**
-7.  **Vestimenta del personal.**
+Esta información permite comprender no solo los procesos formales, sino también la cultura organizacional y las prácticas informales.
 
 ---
 
-## i) Estructura PIECES para Detección de Problemas
+## c) Técnicas de relevamiento
 
-Aunque no se detalla siempre como un acrónimo rígido, las fuentes sugieren evaluar estas dimensiones para justificar un proyecto [13, 72, 73]:
-*   **P (Performance/Rendimiento):** Búsqueda de lentitud o cuellos de botella [67, 74].
-*   **I (Information/Información):** Identificación de falta de datos, inexactitud o redundancia [75, 76].
-*   **E (Economics/Economía):** Deseo de minimizar gastos operativos o aumentar beneficios [13, 72].
-*   **C (Control/Seguridad):** Necesidad de mejores medidas de validación y acceso [73, 77].
-*   **E (Efficiency/Eficiencia):** Cómo la computadora puede simplificar tareas manuales [78].
-*   **S (Service/Servicio):** Mejora de la interacción con el cliente y resolución de quejas [79].
+### Entrevistas
+
+La entrevista es una técnica interactiva fundamental que permite obtener información directa de los usuarios.
+
+#### Planeación de la entrevista
+- Análisis de antecedentes
+- Definición de objetivos
+- Selección de entrevistados
+- Preparación del entrevistado
+- Definición de la estructura
+
+#### Tipos de preguntas
+- **Abiertas:** permiten respuestas amplias y espontáneas
+- **Cerradas:** limitan las opciones y facilitan el análisis
+- **Sondeo:** profundizan sobre respuestas obtenidas
+
+#### Estructuras de entrevista
+- Piramidal (de lo específico a lo general)
+- Embudo (de lo general a lo específico)
+- Diamante (combinada)
+
+---
+
+### Cuestionarios
+
+Los cuestionarios se utilizan cuando:
+- Hay muchos usuarios
+- Están geográficamente dispersos
+- Se requiere información estandarizada
+
+Se pueden utilizar escalas para medir opiniones o percepciones, siendo común el uso de escalas de intervalo (por ejemplo, valores del 1 al 5).
+
+---
+
+### Observación directa
+
+La observación permite conocer el funcionamiento real del sistema, más allá de lo declarado por los usuarios.
+
+El analista puede registrar las actividades mediante secuencias de acciones, describiendo paso a paso las tareas realizadas.
+
+---
+
+### Técnica STROBE
+
+La técnica STROBE consiste en la observación estructurada del entorno físico de trabajo, analizando aspectos como:
+- Ubicación del espacio
+- Disposición del mobiliario
+- Equipamiento
+- Iluminación
+- Elementos tecnológicos
+- Vestimenta y comportamiento
+
+Esta técnica permite detectar factores que influyen en la interacción con el sistema.
+
+---
+
+## d) Identificación de problemas y oportunidades
+
+### Problemas, síntomas y causas
+
+Un problema se presenta cuando los resultados del sistema no cumplen con los objetivos organizacionales.
+
+Es fundamental diferenciar:
+- **Síntomas:** manifestaciones visibles (errores, demoras, quejas)
+- **Causas:** origen real del problema
+
+El analista debe enfocarse en las causas, no en los síntomas.
+
+---
+
+### Oportunidades de mejora
+
+Además de detectar problemas, el analista debe identificar oportunidades de mejora, aprovechando la tecnología para optimizar procesos o generar ventajas competitivas.
+
+---
+
+### Estructura PIECES
+
+La estructura PIECES es un marco de análisis que permite clasificar problemas y oportunidades en distintas dimensiones:
+
+- **Performance (Rendimiento):** velocidad y capacidad del sistema
+- **Information (Información):** calidad y utilidad de la información
+- **Economics (Economía):** costos y beneficios
+- **Control:** seguridad y confiabilidad
+- **Efficiency (Eficiencia):** uso de recursos
+- **Service (Servicio):** satisfacción del usuario
+
+Este enfoque facilita el análisis sistemático de la situación actual y la definición de objetivos de mejora.
+
+---
+
+## e) Planeamiento del relevamiento
+
+### Definición de objetivos
+
+El relevamiento debe planificarse en función de objetivos claros, definidos a partir del análisis preliminar y del contexto organizacional.
+
+---
+
+### Selección de informantes
+
+La selección de informantes debe ser representativa, incluyendo distintos niveles organizacionales, con el objetivo de obtener una visión completa y reducir sesgos.
+
+---
+
+### Secuencia de actividades
+
+Las actividades de relevamiento deben organizarse de manera lógica, considerando:
+- Dependencias entre tareas
+- Disponibilidad de los usuarios
+- Prioridades del proyecto
+
+---
+
+### Registro de la información
+
+Es fundamental registrar la información de manera inmediata y organizada mediante:
+- Notas de entrevistas
+- Registros de observación
+- Documentación estructurada
+
+---
+
+### Informe de relevamiento
+
+El resultado final del proceso es el informe de relevamiento, que incluye:
+- Descripción del problema
+- Análisis de la situación actual
+- Requerimientos identificados
+- Evaluación de viabilidad
+- Alcance del sistema
+
+Este documento constituye la base para el desarrollo posterior del sistema y sirve como referencia para todas las etapas siguientes.
 
 ## Ejemplos
 
